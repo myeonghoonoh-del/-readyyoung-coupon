@@ -1,0 +1,1082 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>READY YOUNG × LECIRT | 旅行×美容コラボキャンペーン</title>
+    <meta name="description" content="READY YOUNG × LECIRT コラボレーション - 旅行パッケージご利用者様限定!薬局でのお買い物特典">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* ===================================
+           CSS Variables & Reset
+           =================================== */
+        :root {
+            --primary-blue: #0066FF;
+            --bright-blue: #00A3FF;
+            --sky-blue: #87CEEB;
+            --travel-mint: #5FDDE5;
+            --cute-pink: #FFB6D9;
+            --dark-bg: #1a1a2e;
+            --light-bg: #f0f8ff;
+            --white: #ffffff;
+            --text-dark: #2c3e50;
+            --text-gray: #5a6c7d;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            line-height: 1.7;
+            color: var(--text-dark);
+            background: var(--white);
+            overflow-x: hidden;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 480px;
+            margin: 0 auto;
+            padding: 0 1.25rem;
+        }
+
+        /* ===================================
+           Hero Section
+           =================================== */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(135deg, #0066FF 0%, #00A3FF 50%, #5FDDE5 100%);
+            padding: 3rem 0;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 20% 30%, rgba(255, 182, 217, 0.3) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 70%, rgba(135, 206, 235, 0.3) 0%, transparent 50%);
+            animation: pulse 8s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 1; }
+        }
+
+        .hero .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            padding: 0.5rem 1.25rem;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50px;
+            color: var(--white);
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 2rem;
+        }
+
+        .hero-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .brand-name {
+            display: block;
+            margin: 0.25rem 0;
+        }
+
+        .collab-icon {
+            display: block;
+            font-size: 1.5rem;
+            margin: 0.5rem 0;
+            color: var(--cute-pink);
+        }
+
+        .hero-subtitle {
+            font-size: 1.125rem;
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.95);
+            margin-bottom: 0.5rem;
+        }
+
+        .hero-description {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            background: linear-gradient(90deg, var(--cute-pink) 0%, var(--white) 50%, var(--sky-blue) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 3rem;
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: bounce 2s ease infinite;
+        }
+
+        .scroll-indicator i {
+            font-size: 1.5rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateX(-50%) translateY(0); }
+            50% { transform: translateX(-50%) translateY(10px); }
+        }
+
+        /* ===================================
+           Section Headers
+           =================================== */
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-label {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            background: linear-gradient(90deg, var(--primary-blue) 0%, var(--travel-mint) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+        }
+
+        .section-description {
+            font-size: 1rem;
+            color: var(--text-gray);
+            font-weight: 500;
+        }
+
+        /* ===================================
+           Event Section
+           =================================== */
+        .event-section {
+            padding: 4rem 0;
+            background: var(--light-bg);
+        }
+
+        .event-card {
+            background: var(--white);
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0, 102, 255, 0.15);
+            overflow: hidden;
+        }
+
+        .event-card-header {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--bright-blue) 100%);
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .event-card-header i {
+            font-size: 2.5rem;
+            color: var(--cute-pink);
+            margin-bottom: 1rem;
+        }
+
+        .event-card-header h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--white);
+            line-height: 1.5;
+        }
+
+        .event-content {
+            padding: 2rem;
+        }
+
+        .benefit-box {
+            background: linear-gradient(135deg, #e3f2fd 0%, #fff 100%);
+            border: 2px solid var(--primary-blue);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .benefit-label {
+            font-size: 0.875rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+        }
+
+        .benefit-text {
+            font-size: 1rem;
+            line-height: 1.8;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+        }
+
+        .benefit-text strong {
+            color: var(--primary-blue);
+            font-weight: 700;
+            font-size: 1.125rem;
+        }
+
+        .highlight {
+            color: var(--travel-mint) !important;
+        }
+
+        .benefit-value {
+            font-size: 0.875rem;
+            color: var(--text-gray);
+        }
+
+        .how-to-section {
+            margin-bottom: 2rem;
+        }
+
+        .how-to-section h4 {
+            font-size: 1.125rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .how-to-section h4 i {
+            color: var(--primary-blue);
+        }
+
+        .steps-list {
+            list-style: none;
+        }
+
+        .steps-list li {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+            padding: 1.5rem;
+            background: var(--light-bg);
+            border-radius: 8px;
+        }
+
+        .step-number {
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--bright-blue) 100%);
+            color: var(--white);
+            font-weight: 700;
+            font-size: 0.875rem;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .step-text {
+            flex: 1;
+            padding-top: 0.25rem;
+        }
+
+        .event-info-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        @media (min-width: 480px) {
+            .event-info-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            padding: 1.5rem;
+            background: var(--light-bg);
+            border-radius: 8px;
+        }
+
+        .info-item i {
+            font-size: 1.5rem;
+            color: var(--primary-blue);
+            flex-shrink: 0;
+        }
+
+        .info-label {
+            font-size: 0.75rem;
+            color: var(--text-gray);
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 0.25rem;
+        }
+
+        .info-value {
+            font-weight: 700;
+            color: var(--text-dark);
+        }
+
+        /* ===================================
+           Products Section
+           =================================== */
+        .products-section {
+            padding: 4rem 0;
+            background: var(--white);
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        @media (min-width: 640px) {
+            .products-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .product-card {
+            position: relative;
+            background: var(--white);
+            border-radius: 16px;
+            box-shadow: 0 4px 15px rgba(0, 102, 255, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 25px rgba(0, 102, 255, 0.2);
+        }
+
+        .product-badge {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--bright-blue) 100%);
+            color: var(--white);
+            padding: 0.375rem 0.875rem;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            z-index: 2;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .product-image {
+            position: relative;
+            width: 100%;
+            padding-top: 100%;
+            background: var(--light-bg);
+            overflow: hidden;
+        }
+
+        .product-image img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 90%;
+            height: 90%;
+            object-fit: contain;
+            transition: transform 0.5s ease;
+        }
+
+        .product-card:hover .product-image img {
+            transform: translate(-50%, -50%) scale(1.05);
+        }
+
+        .product-info {
+            padding: 2rem;
+        }
+
+        .product-name {
+            font-size: 1.125rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+            line-height: 1.4;
+        }
+
+        .product-brand {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.75rem;
+            color: var(--text-gray);
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+
+        .product-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.375rem;
+            padding: 0.375rem 0.75rem;
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--travel-mint) 100%);
+            color: var(--white);
+            font-size: 0.75rem;
+            font-weight: 600;
+            border-radius: 50px;
+        }
+
+        .feature-tag i {
+            font-size: 0.625rem;
+        }
+
+        .product-description {
+            font-size: 0.875rem;
+            line-height: 1.7;
+            color: var(--text-gray);
+        }
+
+        .exclusive-note {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            padding: 1.5rem;
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--bright-blue) 100%);
+            color: var(--white);
+            font-weight: 700;
+            font-size: 1rem;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .exclusive-note i {
+            font-size: 1.25rem;
+        }
+
+        /* ===================================
+           Store Locations Section
+           =================================== */
+        .locations-section {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #f0f8ff 0%, #e6f7ff 100%);
+        }
+
+        .locations-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        @media (min-width: 480px) {
+            .locations-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 768px) {
+            .locations-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .location-card {
+            background: var(--white);
+            padding: 3rem;
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0, 102, 255, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .location-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 30px rgba(0, 102, 255, 0.2);
+            border-color: var(--primary-blue);
+        }
+
+        .location-icon {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 1.5rem;
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--bright-blue) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.75rem;
+            box-shadow: 0 4px 15px rgba(0, 102, 255, 0.3);
+        }
+
+        .location-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 1.5rem;
+        }
+
+        .location-map-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--bright-blue) 100%);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.9375rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 102, 255, 0.3);
+        }
+
+        .location-map-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 102, 255, 0.4);
+            background: linear-gradient(135deg, var(--bright-blue) 0%, var(--travel-mint) 100%);
+        }
+
+        .location-map-btn i {
+            font-size: 1rem;
+        }
+
+        .locations-note {
+            margin-top: 3rem;
+            padding: 2rem;
+            background: var(--white);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0, 102, 255, 0.1);
+        }
+
+        .locations-note i {
+            color: var(--primary-blue);
+            font-size: 1.25rem;
+        }
+
+        /* ===================================
+           CTA Section
+           =================================== */
+        .cta-section {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #0066FF 0%, #00A3FF 50%, #5FDDE5 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 30% 50%, rgba(255, 182, 217, 0.2) 0%, transparent 50%),
+                        radial-gradient(circle at 70% 50%, rgba(135, 206, 235, 0.2) 0%, transparent 50%);
+        }
+
+        .cta-card {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            padding: 3rem 2rem;
+        }
+
+        .cta-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 1.5rem;
+            line-height: 1.4;
+        }
+
+        .cta-description {
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+
+        .cta-highlight {
+            display: inline-block;
+            padding: 1.5rem 2rem;
+            background: rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(10px);
+            border: 2px solid var(--white);
+            border-radius: 50px;
+            color: var(--white);
+            font-weight: 700;
+            font-size: 0.9375rem;
+        }
+
+        /* ===================================
+           Footer
+           =================================== */
+        .footer {
+            background: var(--dark-bg);
+            padding: 3rem 0 2rem;
+            text-align: center;
+        }
+
+        .footer-content {
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 1rem;
+        }
+
+        .footer-logo .brand {
+            color: var(--white);
+        }
+
+        .footer-logo .separator {
+            background: linear-gradient(90deg, var(--cute-pink) 0%, var(--travel-mint) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin: 0 0.5rem;
+        }
+
+        .footer-text {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.875rem;
+        }
+
+        .footer-text p {
+            margin-bottom: 0.25rem;
+        }
+
+        .footer-date {
+            background: linear-gradient(90deg, var(--cute-pink) 0%, var(--sky-blue) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 600;
+            display: inline-block;
+        }
+
+        .footer-organizer {
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.875rem;
+        }
+
+        /* ===================================
+           Responsive Typography
+           =================================== */
+        @media (min-width: 768px) {
+            .container {
+                max-width: 720px;
+                padding: 0 2rem;
+            }
+
+            .hero-title {
+                font-size: 3.5rem;
+            }
+
+            .hero-description {
+                font-size: 1.75rem;
+            }
+
+            .section-title {
+                font-size: 2.5rem;
+            }
+
+            .cta-title {
+                font-size: 2.25rem;
+            }
+        }
+
+        @media (max-width: 374px) {
+            html {
+                font-size: 14px;
+            }
+        }
+
+        /* ===================================
+           Animations
+           =================================== */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-badge">✈️ Travel x Beauty Collaboration 🎁</div>
+            <h1 class="hero-title">
+                <span class="brand-name">READY YOUNG</span>
+                <span class="collab-icon">×</span>
+                <span class="brand-name">LECIRT</span>
+            </h1>
+            <p class="hero-subtitle">🌏 LECIRT 旅行パッケージご利用者様限定</p>
+            <p class="hero-description">スペシャルギフトキャンペーン</p>
+            
+            <div class="scroll-indicator">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Event Details Section -->
+    <section class="event-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">CAMPAIGN</span>
+                <h2 class="section-title">キャンペーン詳細</h2>
+            </div>
+
+            <div class="event-card fade-in">
+                <div class="event-card-header">
+                    <i class="fas fa-plane-departure"></i>
+                    <h3>✈️ LECIRT 旅行パッケージご利用者様特典 🎁</h3>
+                </div>
+                
+                <div class="event-content">
+                    <div class="benefit-box">
+                        <div class="benefit-label">特典内容</div>
+                        <div class="benefit-text">
+                            💊 READY YOUNG 薬局にて<strong>60,000ウォン以上</strong>お買い上げのお客様に<br>
+                            <strong class="highlight">🎁 PHARMATIQUE マスクパック</strong>をプレゼント
+                        </div>
+                        <div class="benefit-value">（19,000ウォン相当）</div>
+                    </div>
+
+                    <div class="how-to-section">
+                        <h4><i class="fas fa-route"></i> ご利用方法</h4>
+                        <ol class="steps-list">
+                            <li class="fade-in">
+                                <span class="step-number">1</span>
+                                <span class="step-text">✈️ LECIRT 旅行パッケージご利用証明書をご準備</span>
+                            </li>
+                            <li class="fade-in">
+                                <span class="step-number">2</span>
+                                <span class="step-text">💊 READY YOUNG 薬局にて60,000ウォン以上お買い物</span>
+                            </li>
+                            <li class="fade-in">
+                                <span class="step-number">3</span>
+                                <span class="step-text">📱 レジにてご利用証明書のQRコードをご提示</span>
+                            </li>
+                            <li class="fade-in">
+                                <span class="step-number">4</span>
+                                <span class="step-text">🎁 PHARMATIQUE マスクパックを受け取り</span>
+                            </li>
+                        </ol>
+                    </div>
+
+                    <div class="event-info-grid">
+                        <div class="info-item fade-in">
+                            <i class="fas fa-calendar-alt"></i>
+                            <div>
+                                <div class="info-label">キャンペーン期間</div>
+                                <div class="info-value">〜2026年5月29日まで</div>
+                            </div>
+                        </div>
+                        <div class="info-item fade-in">
+                            <i class="fas fa-globe-asia"></i>
+                            <div>
+                                <div class="info-label">主催</div>
+                                <div class="info-value">🌏 LECIRT</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">💄 BEAUTY PRODUCTS</span>
+                <h2 class="section-title">プレゼント商品 🎁</h2>
+                <p class="section-description">✨ Only READY YOUNG 限定マスクパック</p>
+            </div>
+
+            <div class="products-grid">
+                <!-- Product 1 -->
+                <div class="product-card fade-in">
+                    <div class="product-badge">Premium</div>
+                    <div class="product-image">
+                        <img src="images/product-red-ginseng-mask.jpg" alt="PHARMATIQUE プレミアム紅参PDRN リジュビネイティングマスク" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">プレミアム紅参PDRN<br>リジュビネイティングマスク</h3>
+                        <div class="product-brand">PHARMATIQUE</div>
+                        <div class="product-features">
+                            <span class="feature-tag"><i class="fas fa-star"></i> 美白</span>
+                            <span class="feature-tag"><i class="fas fa-star"></i> シワ改善</span>
+                        </div>
+                        <p class="product-description">
+                            紅参とPDRNの力で肌を深く潤し、若々しい輝きを取り戻します。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card fade-in">
+                    <div class="product-badge">Premium</div>
+                    <div class="product-image">
+                        <img src="images/product-gold-mask.jpg" alt="PHARMATIQUE プレミアムゴールドPDRN グローマスク" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">プレミアムゴールドPDRN<br>グローマスク</h3>
+                        <div class="product-brand">PHARMATIQUE</div>
+                        <div class="product-features">
+                            <span class="feature-tag"><i class="fas fa-star"></i> 美白</span>
+                            <span class="feature-tag"><i class="fas fa-star"></i> シワ改善</span>
+                        </div>
+                        <p class="product-description">
+                            ゴールドとPDRNの贅沢な組み合わせで、肌に輝きと弾力をもたらします。
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="exclusive-note">
+                <i class="fas fa-star"></i>
+                <span>💊 READY YOUNG 薬局・基礎化粧品 Only 限定商品 ✨</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Store Locations Section -->
+    <section class="locations-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">📍 STORE LOCATIONS</span>
+                <h2 class="section-title">READY YOUNG 薬局 店舗案内</h2>
+                <p class="section-description">✨ キャンペーン実施店舗 ✨</p>
+            </div>
+
+            <div class="locations-grid">
+                <!-- Hongdae -->
+                <div class="location-card fade-in">
+                    <div class="location-icon">
+                        <i class="fas fa-store"></i>
+                    </div>
+                    <h3 class="location-name">弘大 READY YOUNG</h3>
+                    <a href="https://maps.app.goo.gl/8BafpBTSQBEkoYS69" target="_blank" rel="noopener noreferrer" class="location-map-btn">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Google Mapで見る</span>
+                    </a>
+                </div>
+
+                <!-- Myeongdong -->
+                <div class="location-card fade-in">
+                    <div class="location-icon">
+                        <i class="fas fa-store"></i>
+                    </div>
+                    <h3 class="location-name">明洞 READY YOUNG</h3>
+                    <a href="https://maps.app.goo.gl/jMewACgR6PbncC6d7" target="_blank" rel="noopener noreferrer" class="location-map-btn">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Google Mapで見る</span>
+                    </a>
+                </div>
+
+                <!-- Gangnam -->
+                <div class="location-card fade-in">
+                    <div class="location-icon">
+                        <i class="fas fa-store"></i>
+                    </div>
+                    <h3 class="location-name">江南 READY YOUNG</h3>
+                    <a href="https://maps.app.goo.gl/TcR38ich6qudFmfB6" target="_blank" rel="noopener noreferrer" class="location-map-btn">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Google Mapで見る</span>
+                    </a>
+                </div>
+
+                <!-- Myeongdong Town -->
+                <div class="location-card fade-in">
+                    <div class="location-icon">
+                        <i class="fas fa-store"></i>
+                    </div>
+                    <h3 class="location-name">明洞タウン READY YOUNG</h3>
+                    <a href="https://maps.app.goo.gl/9WYzLHZMo3oFVCoN9" target="_blank" rel="noopener noreferrer" class="location-map-btn">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Google Mapで見る</span>
+                    </a>
+                </div>
+
+                <!-- Seongsu -->
+                <div class="location-card fade-in">
+                    <div class="location-icon">
+                        <i class="fas fa-store"></i>
+                    </div>
+                    <h3 class="location-name">聖水 READY YOUNG</h3>
+                    <a href="https://maps.app.goo.gl/xRnUqinjtgXDopSH7" target="_blank" rel="noopener noreferrer" class="location-map-btn">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Google Mapで見る</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="locations-note">
+                <i class="fas fa-info-circle"></i>
+                <span>全店舗でキャンペーン実施中！お近くの店舗をご利用ください 🎁</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-card">
+                <h2 class="cta-title">💊 READY YOUNG 薬局で<br>お待ちしております ✨</h2>
+                <p class="cta-description">
+                    ✈️ LECIRT 旅行パッケージをご利用された方は、<br>
+                    この機会をお見逃しなく！🎁
+                </p>
+                <div class="cta-highlight">
+                    📱 ご利用証明書のQRコードをご準備ください
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="brand">💊 READY YOUNG</span>
+                    <span class="separator">×</span>
+                    <span class="brand">✈️ LECIRT</span>
+                </div>
+                <div class="footer-text">
+                    <p>🌏 Travel x Beauty Collaboration Campaign 💄</p>
+                    <p class="footer-date">〜2026.05.29</p>
+                </div>
+            </div>
+            <div class="footer-organizer">
+                <p>主催: ✈️ LECIRT 旅行パッケージ | 協力: 💊 READY YOUNG 薬局・基礎化粧品</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for Fade-in Animation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all fade-in elements
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
